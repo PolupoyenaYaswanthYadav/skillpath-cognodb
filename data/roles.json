@@ -1,0 +1,107 @@
+[
+  {
+    "id": "data-analyst",
+    "name": "Data Analyst",
+    "description": "Analyzes business data to uncover trends, answer questions, and support decision-making.",
+    "category": "Data",
+    "seniority": "Entry to Mid"
+  },
+  {
+    "id": "data-engineer",
+    "name": "Data Engineer",
+    "description": "Designs and maintains reliable data pipelines, platforms, and analytical infrastructure.",
+    "category": "Data",
+    "seniority": "Mid"
+  },
+  {
+    "id": "data-scientist",
+    "name": "Data Scientist",
+    "description": "Uses statistical analysis and machine learning to generate predictions and actionable insights.",
+    "category": "AI & Data",
+    "seniority": "Mid"
+  },
+  {
+    "id": "ml-engineer",
+    "name": "Machine Learning Engineer",
+    "description": "Builds, deploys, and maintains machine learning systems in production.",
+    "category": "AI & Data",
+    "seniority": "Mid"
+  },
+  {
+    "id": "ai-engineer",
+    "name": "AI Engineer",
+    "description": "Builds production applications powered by modern AI and machine learning models.",
+    "category": "AI & Data",
+    "seniority": "Mid"
+  },
+  {
+    "id": "backend-engineer",
+    "name": "Backend Engineer",
+    "description": "Builds scalable server-side systems, APIs, services, and data-intensive applications.",
+    "category": "Software Engineering",
+    "seniority": "Mid"
+  },
+  {
+    "id": "software-engineer",
+    "name": "Software Engineer",
+    "description": "Designs and develops reliable software systems across application and platform layers.",
+    "category": "Software Engineering",
+    "seniority": "Entry to Mid"
+  },
+  {
+    "id": "analytics-engineer",
+    "name": "Analytics Engineer",
+    "description": "Transforms raw data into trustworthy, well-modeled datasets for analytics and business intelligence.",
+    "category": "Data",
+    "seniority": "Mid"
+  },
+  {
+    "id": "mlops-engineer",
+    "name": "MLOps Engineer",
+    "description": "Builds infrastructure and workflows for reliable machine learning development and deployment.",
+    "category": "AI & Infrastructure",
+    "seniority": "Mid to Senior"
+  },
+  {
+    "id": "cloud-engineer",
+    "name": "Cloud Engineer",
+    "description": "Designs and operates scalable cloud infrastructure and services.",
+    "category": "Cloud & Infrastructure",
+    "seniority": "Mid"
+  },
+  {
+    "id": "devops-engineer",
+    "name": "DevOps Engineer",
+    "description": "Automates software delivery and manages reliable development and production infrastructure.",
+    "category": "Cloud & Infrastructure",
+    "seniority": "Mid"
+  },
+  {
+    "id": "bi-developer",
+    "name": "BI Developer",
+    "description": "Builds reporting systems, dashboards, semantic models, and business intelligence solutions.",
+    "category": "Data",
+    "seniority": "Entry to Mid"
+  },
+  {
+    "id": "nlp-engineer",
+    "name": "NLP Engineer",
+    "description": "Develops systems that process, understand, and generate human language.",
+    "category": "AI & Data",
+    "seniority": "Mid"
+  },
+  {
+    "id": "computer-vision-engineer",
+    "name": "Computer Vision Engineer",
+    "description": "Builds machine learning systems that interpret and analyze images and video.",
+    "category": "AI & Data",
+    "seniority": "Mid"
+  },
+  {
+    "id": "research-engineer",
+    "name": "Research Engineer",
+    "description": "Turns research ideas into experimental and production-quality computational systems.",
+    "category": "AI & Research",
+    "seniority": "Mid to Senior"
+  }
+]

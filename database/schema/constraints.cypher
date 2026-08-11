@@ -1,0 +1,23 @@
+CREATE CONSTRAINT role_id_unique IF NOT EXISTS
+FOR (r:Role)
+REQUIRE r.id IS UNIQUE;
+
+CREATE CONSTRAINT skill_id_unique IF NOT EXISTS
+FOR (s:Skill)
+REQUIRE s.id IS UNIQUE;
+
+CREATE CONSTRAINT technology_id_unique IF NOT EXISTS
+FOR (t:Technology)
+REQUIRE t.id IS UNIQUE;
+
+CREATE CONSTRAINT project_id_unique IF NOT EXISTS
+FOR (p:Project)
+REQUIRE p.id IS UNIQUE;
+
+CREATE CONSTRAINT company_id_unique IF NOT EXISTS
+FOR (c:Company)
+REQUIRE c.id IS UNIQUE;
+
+CREATE CONSTRAINT course_id_unique IF NOT EXISTS
+FOR (c:Course)
+REQUIRE c.id IS UNIQUE;

@@ -1,0 +1,22 @@
+[
+  {"id":"google","name":"Google","industry":"Technology","size":"Enterprise"},
+  {"id":"microsoft","name":"Microsoft","industry":"Technology","size":"Enterprise"},
+  {"id":"amazon","name":"Amazon","industry":"Technology & Commerce","size":"Enterprise"},
+  {"id":"meta","name":"Meta","industry":"Technology","size":"Enterprise"},
+  {"id":"netflix","name":"Netflix","industry":"Entertainment Technology","size":"Enterprise"},
+  {"id":"uber","name":"Uber","industry":"Transportation Technology","size":"Enterprise"},
+  {"id":"databricks","name":"Databricks","industry":"Data & AI","size":"Enterprise"},
+  {"id":"snowflake","name":"Snowflake","industry":"Data Cloud","size":"Enterprise"},
+  {"id":"atlassian","name":"Atlassian","industry":"Enterprise Software","size":"Enterprise"},
+  {"id":"adobe","name":"Adobe","industry":"Software","size":"Enterprise"},
+  {"id":"flipkart","name":"Flipkart","industry":"E-Commerce","size":"Enterprise"},
+  {"id":"razorpay","name":"Razorpay","industry":"FinTech","size":"Large"},
+  {"id":"swiggy","name":"Swiggy","industry":"Consumer Technology","size":"Large"},
+  {"id":"phonepe","name":"PhonePe","industry":"FinTech","size":"Large"},
+  {"id":"zomato","name":"Zomato","industry":"Consumer Technology","size":"Large"},
+  {"id":"salesforce","name":"Salesforce","industry":"Enterprise Software","size":"Enterprise"},
+  {"id":"airbnb","name":"Airbnb","industry":"Travel Technology","size":"Enterprise"},
+  {"id":"linkedin","name":"LinkedIn","industry":"Professional Technology","size":"Enterprise"},
+  {"id":"nvidia","name":"NVIDIA","industry":"Semiconductors & AI","size":"Enterprise"},
+  {"id":"stripe","name":"Stripe","industry":"FinTech","size":"Enterprise"}
+]

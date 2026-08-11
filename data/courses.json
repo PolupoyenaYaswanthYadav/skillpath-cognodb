@@ -1,0 +1,22 @@
+[
+  {"id":"sql-data-analysis","name":"SQL for Data Analysis","provider":"DataCamp","level":"Beginner"},
+  {"id":"python-data-science","name":"Python for Data Science","provider":"Coursera","level":"Beginner"},
+  {"id":"data-engineering","name":"Data Engineering Foundations","provider":"Coursera","level":"Intermediate"},
+  {"id":"spark-processing","name":"Large-Scale Data Processing with Spark","provider":"Databricks","level":"Advanced"},
+  {"id":"airflow-orchestration","name":"Workflow Orchestration with Airflow","provider":"Astronomer","level":"Intermediate"},
+  {"id":"machine-learning","name":"Machine Learning Foundations","provider":"Coursera","level":"Intermediate"},
+  {"id":"deep-learning","name":"Deep Learning Specialization","provider":"Coursera","level":"Advanced"},
+  {"id":"mlops","name":"MLOps Fundamentals","provider":"Coursera","level":"Advanced"},
+  {"id":"docker-course","name":"Docker Fundamentals","provider":"Docker","level":"Beginner"},
+  {"id":"kubernetes-course","name":"Kubernetes Fundamentals","provider":"Linux Foundation","level":"Intermediate"},
+  {"id":"aws-cloud","name":"AWS Cloud Foundations","provider":"AWS","level":"Beginner"},
+  {"id":"system-design","name":"System Design Fundamentals","provider":"Educative","level":"Advanced"},
+  {"id":"statistics-course","name":"Statistics for Data Science","provider":"Coursera","level":"Intermediate"},
+  {"id":"nlp-course","name":"Natural Language Processing","provider":"Coursera","level":"Advanced"},
+  {"id":"computer-vision-course","name":"Computer Vision Fundamentals","provider":"Coursera","level":"Advanced"},
+  {"id":"postgres-course","name":"PostgreSQL Fundamentals","provider":"PostgreSQL","level":"Beginner"},
+  {"id":"dbt-course","name":"Analytics Engineering with dbt","provider":"dbt Labs","level":"Intermediate"},
+  {"id":"kafka-course","name":"Apache Kafka Fundamentals","provider":"Confluent","level":"Advanced"},
+  {"id":"terraform-course","name":"Infrastructure with Terraform","provider":"HashiCorp","level":"Advanced"},
+  {"id":"git-course","name":"Git and Collaborative Development","provider":"GitHub","level":"Beginner"}
+]
