@@ -5,9 +5,34 @@ SkillPath is a graph-powered web application for exploring relationships between
 Instead of presenting career information as disconnected lists, SkillPath models these entities as a connected graph. Users can search for a role and explore the skills, technologies, projects, courses, companies, and related roles connected to it.
 
 The application uses **CognoDB** as its graph database and communicates with it through the Neo4j-compatible driver and openCypher.
-
 ---
 
+## Live Demo
+
+**Hosted Application:**  
+https://skillpath-cognodb.vercel.app
+
+**Backend API:**  
+https://skillpath-cognodb-api.onrender.com
+
+The frontend is deployed on Vercel and the FastAPI backend is deployed on Render. The backend connects to CognoDB Cloud.
+---
+---
+
+## Live Demo
+
+**Hosted Application:**  
+https://skillpath-cognodb.vercel.app
+
+**Backend API:**  
+https://skillpath-cognodb-api.onrender.com
+
+**Health Check:**  
+https://skillpath-cognodb-api.onrender.com/api/health
+
+The frontend is deployed on Vercel and the FastAPI backend is deployed on Render. The backend connects to CognoDB Cloud.
+
+---
 ## Overview
 
 When exploring a technical career, a list of required skills is often not enough. A useful career exploration system should help answer connected questions such as:
@@ -76,7 +101,7 @@ The current graph contains:
 ### Node Types
 
 | Node | Description |
-|---|---|
+| --- | --- |
 | `Role` | Technical career roles |
 | `Skill` | Skills associated with technical roles |
 | `Technology` | Programming languages, frameworks, tools, and platforms |
@@ -87,7 +112,7 @@ The current graph contains:
 ### Relationship Types
 
 | Relationship | Direction | Meaning |
-|---|---|---|
+| --- | --- | --- |
 | `HIRES_FOR` | Company → Role | Company hires for a role |
 | `REQUIRES` | Role → Skill | Role requires a skill |
 | `USES` | Role → Technology | Role uses a technology |
@@ -166,8 +191,27 @@ The current seeded graph contains 154 nodes and 425 relationships.
 
 ---
 
-## Architecture
 
+### Deployed Architecture
+
+```text
+User Browser
+     │
+     ▼
+Vercel
+React + Vite
+     │
+     │ HTTPS / JSON
+     ▼
+Render
+FastAPI Backend
+     │
+     ▼
+Neo4j Python Driver
+     │
+     │ Bolt
+     ▼
+CognoDB Cloud
 ```text
 ┌──────────────────────────────┐
 │          React UI            │
@@ -352,7 +396,67 @@ skillpath-cognodb/
 ```
 
 ---
+## CognoDB Setup
 
+SkillPath uses CognoDB Cloud as its graph database.
+
+### 1. Create a CognoDB account
+
+Create an account at:
+
+https://console.cognodb.com/signup
+
+### 2. Create a free instance
+
+Create a free `c0` instance from the CognoDB Cloud console and select a region.
+
+### 3. Save the connection credentials
+
+CognoDB provides:
+
+- Bolt URI
+- Username: `cognodb`
+- Generated database password
+
+The database password is displayed once when the instance is created, so save it securely.
+
+### 4. Configure the application
+
+Store the database credentials in a local `.env` file as described below.
+
+The `.env` file is excluded from Git and must never be committed.
+## CognoDB Setup
+
+SkillPath uses CognoDB Cloud as its graph database.
+
+### 1. Create a CognoDB account
+
+Create an account at:
+
+https://console.cognodb.com/signup
+
+### 2. Create a free instance
+
+Create a free `c0` instance from the CognoDB Cloud console and select a region.
+
+### 3. Save the connection credentials
+
+CognoDB provides:
+
+- Bolt URI
+- Username: `cognodb`
+- Generated database password
+
+The database password is displayed once when the instance is created, so save it securely.
+
+### 4. Configure the application
+
+Store the database credentials in a local `.env` file as described below.
+
+The `.env` file is excluded from Git and must never be committed.
+
+---
+---
 ## Environment Variables
 
 Database credentials are stored locally in `.env`.
@@ -364,6 +468,14 @@ COGNODB_URI=bolt+s://<instance-id>.databases.cognodb.cloud
 COGNODB_USERNAME=cognodb
 COGNODB_PASSWORD=<your-password>
 ```
+
+For the deployed frontend, the API endpoint is configured using:
+
+```env
+VITE_API_URL=https://skillpath-cognodb-api.onrender.com/api
+```
+
+The actual CognoDB password is never committed to the repository.
 
 `.env` is excluded from Git through `.gitignore`.
 
@@ -415,6 +527,7 @@ The application currently provides:
 - Project recommendations
 - Course recommendations
 - Similar role exploration
+- Skill gap comparison
 - Loading states
 - Connection error states
 
@@ -422,7 +535,29 @@ The application currently provides:
 
 ## Screenshots
 
-Screenshots of the completed application will be added here before final submission.
+### Home / Career Search
+
+![SkillPath Home](screenshots/1-home.png)
+
+### Search Results
+
+![Search Results](screenshots/2-search_result.png)
+
+### Role Details
+
+![Role Details](screenshots/3-role_details.png)
+
+### Interactive Graph
+
+![Interactive Graph](screenshots/4-interactive_graph.png)
+
+### Additional Role Details
+
+![Additional Role Details](screenshots/5-other_details_1.png)
+
+### Additional Details
+
+![Additional Details](screenshots/6-other_details2.png)
 
 ---
 
@@ -437,8 +572,10 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-Install the backend dependencies and configure the `.env` file.
+Install the backend dependencies:
 
+```bash
+pip install -r requirements.txt
 Then start FastAPI:
 
 ```bash
@@ -450,7 +587,36 @@ The backend runs on:
 ```text
 http://127.0.0.1:8000
 ```
+## Deployment
 
+### Frontend
+
+The React frontend is deployed on Vercel.
+
+**Live URL:**  
+https://skillpath-cognodb.vercel.app
+
+Configuration:
+
+- Root directory: `frontend`
+- Build command: `npm run build`
+- Output directory: `dist`
+
+### Backend
+
+The FastAPI backend is deployed on Render.
+
+**API URL:**  
+https://skillpath-cognodb-api.onrender.com
+
+Configuration:
+
+```text
+Build Command:
+pip install -r requirements.txt
+
+Start Command:
+uvicorn backend.main:app --host 0.0.0.0 --port $PORT
 ### Frontend
 
 From the `frontend` directory:
